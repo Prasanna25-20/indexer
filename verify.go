@@ -7,7 +7,7 @@ import (
 )
 
 func FullReplayVerification(ctx context.Context) {
-    fmt.Println("=== Day 17: Full Replay Verification ===")
+    fmt.Println("===  Full Replay Verification ===")
 
     // Step 1: Delete DB
     fmt.Println("Deleting database...")
@@ -47,8 +47,8 @@ func FullReplayVerification(ctx context.Context) {
 
     // Step 5: Compare hashes
     if hash1 == hash2 {
-        fmt.Println("✅ Full Replay Verification PASSED — Hashes are identical!")
+        fmt.Println(" Full Replay Verification PASSED — Hashes are identical!")
     } else {
-        fmt.Println("❌ Full Replay Verification FAILED — Hashes differ!")
+        fmt.Println("Full Replay Verification FAILED — Hashes differ!")
     }
 }
