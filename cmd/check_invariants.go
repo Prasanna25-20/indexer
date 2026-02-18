@@ -11,5 +11,5 @@ func main() {
     if err := invariants.CheckAll(); err != nil {
         log.Fatal(err)
     }
-    fmt.Println("All invariants passed ✅")
+    fmt.Println("All invariants passed ")
 }
