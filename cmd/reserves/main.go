@@ -23,7 +23,7 @@ func main() {
 	}
 	defer conn.Close(ctx)
 
-	// 1️⃣ READ all sync events first
+	//  READ all sync events first
 	rows, err := conn.Query(ctx, `
 		SELECT
 			pair_address,
@@ -46,9 +46,9 @@ func main() {
 		}
 		events = append(events, ev)
 	}
-	rows.Close() // 🔑 VERY IMPORTANT
+	rows.Close() 
 
-	// 2️⃣ APPLY events to build reserves
+	//  APPLY events to build reserves
 	for _, ev := range events {
 		_, err := conn.Exec(ctx, `
 			INSERT INTO pair_reserves
