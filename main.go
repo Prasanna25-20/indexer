@@ -145,9 +145,9 @@ func FullReplayVerification(ctx context.Context, conn *pgx.Conn) {
 
 	// Step 5: Compare
 	if hash1 == hash2 {
-		fmt.Println("✅ Full Replay Verification PASSED — Hashes are identical!")
+		fmt.Println(" Full Replay Verification PASSED — Hashes are identical!")
 	} else {
-		fmt.Println("❌ Full Replay Verification FAILED — Hashes differ!")
+		fmt.Println(" Full Replay Verification FAILED — Hashes differ!")
 	}
 }
 
@@ -168,7 +168,7 @@ func main() {
 		if err := RunReplay(ctx, conn, startBlock, safeTip); err != nil {
 			log.Fatal(err)
 		}
-		log.Println("Day 15 Indexing Complete ✅")
+		log.Println(" Indexing Complete ")
 	} else {
 		log.Println("No new blocks to index. Safe tip:", safeTip)
 	}
