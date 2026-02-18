@@ -56,7 +56,7 @@ func main() {
         }
     }
 
-    fmt.Println("✅ State hashing completed.")
+    fmt.Println(" State hashing completed.")
 }
 
 // ---------------- FETCH STATE ----------------
